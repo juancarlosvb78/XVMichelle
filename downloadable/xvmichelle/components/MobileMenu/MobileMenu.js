@@ -6,93 +6,8 @@ import { Link } from 'react-scroll'
 import NavLink from 'next/link'
 
 const menus = [
-    {
-        id: 1,
-        title: 'Home',
-        link: '/home',
-        submenu: [
-            {
-                id: 11,
-                title: 'Home style 1',
-                link: '/home'
-            },
-            {
-                id: 12,
-                title: 'Home style 2',
-                link: '/home2'
-            },
-            {
-                id: 13,
-                title: 'Home style 3',
-                link: '/home3'
-            },
-            {
-                id: 15,
-                title: 'Home Static Hero',
-                link: '/home4'
-            },
-            {
-                id: 16,
-                title: 'Home Box Style',
-                link: '/home5'
-            },
-            {
-                id: 17,
-                title: 'Home particles Effect',
-                link: '/home6'
-            },
-            {
-                id: 18,
-                title: 'Home Video Banar',
-                link: '/home7'
-            },
-            {
-                id: 14,
-                title: 'Invitation',
-                link: '/invitation'
-            },
-        ]
-    },
-    {
-        id: 6,
-        title: 'Blog',
-        link: '/blog',
-        submenu: [
-            {
-                id: 61,
-                title: 'Blog',
-                link: '/blog'
-            },
-            {
-                id: 62,
-                title: 'Blog Left sidebar',
-                link: '/blog-left-sidebar'
-            },
-            {
-                id: 63,
-                title: 'Blog full width',
-                link: '/blog-fullwidth'
-            },
-            {
-                id: 64,
-                title: 'Blog single',
-                link: '/blog-single/You-must-need-a-great-photographer.'
-            },
-            {
-                id: 65,
-                title: 'Blog single Left sidebar',
-                link: '/blog-single-left-sidebar/You-must-need-a-great-photographer.'
-            },
-            {
-                id: 66,
-                title: 'Blog single full width',
-                link: '/blog-single-fullwidth/You-must-need-a-great-photographer.'
-            },
-        ]
-    }
-
-
-]
+    // Se eliminaron Home y Blog porque no se ocuparán en la invitación.
+];
 
 
 const MobileMenu = () => {
@@ -141,11 +56,12 @@ const MobileMenu = () => {
                             </ListItem>
                         )
                     })}
-                    <li><Link activeclass="active" to="couple" spy={true} smooth={true} duration={500} >Couple</Link></li>
-                    <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} >Story</Link></li>
-                    <li><Link activeclass="active" to="gallery" spy={true} smooth={true} duration={500} >Gallery</Link></li>
-                    <li><Link activeclass="active" to="RSVP" spy={true} smooth={true} duration={500} >RSVP</Link></li>
-                    <li><Link activeclass="active" to="event" spy={true} smooth={true} duration={500} >Events</Link></li>
+                    <li><Link activeclass="active" to="couple" spy={true} smooth={true} duration={500} >Presentación</Link></li>
+                    <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} >Especial</Link></li>
+                    <li><Link activeclass="active" to="gallery" spy={true} smooth={true} duration={500} >Galería</Link></li>
+                    <li><Link activeclass="active" to="RSVP" spy={true} smooth={true} duration={500} >Asistencia</Link></li>
+                    <li><Link activeclass="active" to="parents" spy={true} smooth={true} duration={500}>Padres y padrinos</Link></li>
+                    <li><Link activeclass="active" to="event" spy={true} smooth={true} duration={500} >Eventos</Link></li>
                 </ul>
 
             </div>

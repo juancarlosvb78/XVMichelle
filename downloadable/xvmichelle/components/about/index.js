@@ -17,7 +17,7 @@ const About = (props) => {
                         <div className="col-lg-6 col-md-12 col-12">
                             <div className="wpo-about-content">
                                 <div className="about-title">
-                                    <h2>Your Successful Wedding is Our Job.</h2>
+                                    <h2>Acerca de nosotros</h2>
                                 </div>
                                 <div className="wpo-about-content-inner">
                                     <span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span>

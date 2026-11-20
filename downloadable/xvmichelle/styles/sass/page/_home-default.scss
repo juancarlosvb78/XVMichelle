@@ -1169,8 +1169,13 @@
 	}
 
 	.wpo-cta-item {
-		padding: 145px 0;
-		text-align: center;
+    min-height: 700px;
+    padding: 40px 30px 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
 		background: url(/images/cta2.jpg) no-repeat center center;
 		position: relative;
 		z-index: 1;
@@ -1178,52 +1183,61 @@
 		overflow: hidden;
 
 		@media(max-width:991px) {
-			padding: 90px 15px;
-		}
+    min-height: 600px;
+    padding: 30px 20px 45px;
+    background-attachment: scroll;
+}
 
-		&:before {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background: $black;
-			content: "";
-			opacity: .30;
-			z-index: -1;
-		}
+	&:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(128, 128, 128, 0.80);
+    z-index: 1;
+    pointer-events: none;
+}
 
-		h2 {
-			font-size: 50px;
-			font-style: normal;
-			font-weight: 400;
-			color: $white;
-			margin: 10px 0 30px;
+h2,
+p {
+    position: relative;
+    z-index: 2;
+}
 
-			@media(max-width:991px) {
-				font-size: 60px;
-			}
+h2 {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff !important;
+    margin: 10px 0 20px;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.90);
 
-			@media(max-width:767px) {
-				font-size: 40px;
-			}
 
-			@media(max-width:480px) {
-				font-size: 30px;
-				margin: 10px 0 20px;
-			}
-		}
+    @media(max-width:991px) {
+        font-size: 45px;
+    }
 
-		p {
-			font-size: 18px;
-			font-style: normal;
-			font-weight: 500;
-			line-height: 155%;
-			color: $white;
-			max-width: 480px;
-			margin: 0 auto;
-			margin-bottom: 30px;
-		}
+    @media(max-width:767px) {
+        font-size: 36px;
+    }
+
+    @media(max-width:480px) {
+        font-size: 28px;
+        margin: 10px 0 15px;
+    }
+}
+
+p {
+	position: relative;
+    z-index: 2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 155%;
+    color: #ffffff !important;
+    max-width: 480px;
+    margin: 0 auto;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.90);
+}
 	}
 }
 

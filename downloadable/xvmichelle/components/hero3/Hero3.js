@@ -1,5 +1,5 @@
 import React from 'react'
-import hImg1 from '/public/images/slider/s3.png'
+import hImg1 from '/public/images/slider/XV_Michelle_502x753.png'
 import shape1 from '/public/images/slider/line-shape1.svg'
 import shape2 from '/public/images/slider/line-shape2.svg'
 import shape3 from '/public/images/slider/shape3.png'
@@ -19,10 +19,10 @@ const Hero3 = (props) => {
                             <div className="col-xl-6  col-12">
                                 <div className="wpo-static-hero-inner">
                                     <div data-swiper-parallax="300" className="slide-title">
-                                        <h2>Sophia & Oliver</h2>
+                                        <h2>Michelle</h2>
                                     </div>
                                     <div data-swiper-parallax="400" className="slide-text">
-                                        <p>We Are Getting Married November 15,2024</p>
+                                        <p>Mis XV Años - Viernes 18 de diciembre 2026</p>
                                     </div>
                                     <div className="clearfix"></div>
                                     <div className="shape">

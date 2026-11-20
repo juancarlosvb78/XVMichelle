@@ -2,7 +2,8 @@ import React from 'react'
 const {useState, useEffect} = React;
 
 const TimeCountDown = () => {
-  const [countdownDate] = useState(new Date('06/06/2025').getTime());
+  // Cambiamos la fecha aquí al 18 de diciembre de 2026 (12/18/2026)
+  const [countdownDate] = useState(new Date('12/18/2026').getTime());
   const [state, setState] = useState({
     days: 0,
     hours: 0,
@@ -11,8 +12,8 @@ const TimeCountDown = () => {
   });
 
   useEffect(() => {
-    setInterval(() => setNewTime(), 1000);
-    return () => clearInterval();
+    const interval = setInterval(() => setNewTime(), 1000);
+    return () => clearInterval(interval); // Limpiamos correctamente el intervalo
   }, []);
 
   const setNewTime = () => {
@@ -70,4 +71,3 @@ const TimeCountDown = () => {
 };
 
 export default TimeCountDown;
-

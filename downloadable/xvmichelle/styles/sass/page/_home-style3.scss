@@ -1,5 +1,5 @@
 /*======================================
- 6. Home-style-3 
+ 6. Home-style-3
  =======================================*/
 
 /*6.1 wpo-wedding-date-s3 */
@@ -174,10 +174,27 @@
 			mask-image: none;
 		}
 		.line-shape {
-			position: absolute;
-			left: 0;
-			top: -18px;
-		}
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: -18px;
+    transform: translateX(-50%);
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (min-width: 768px) {
+        width: 73%;
+    }
+
+    @media (min-width: 1440px) {
+        width: 75%;
+    }
+
+}
 	}
 }
 

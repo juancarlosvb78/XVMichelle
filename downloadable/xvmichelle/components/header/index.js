@@ -26,14 +26,14 @@ const Header = (props) => {
               </div>
               <div className="col-lg-2 col-md-6 col-6">
                 <div className="navbar-header">
-                  <NavLink className="navbar-brand logo" href='/'>Mawhub</NavLink>
+                  <NavLink className="navbar-brand logo" href='/'>XV Michelle</NavLink>
                 </div>
               </div>
               <div className="col-lg-8 col-md-1 col-1">
                 <div id="navbar" className="collapse navbar-collapse navigation-holder">
                   <button className="menu-close"><i className="ti-close"></i></button>
                   <ul className="nav navbar-nav mb-2 mb-lg-0">
-                    <li className="menu-item-has-children">
+                    {/* <li className="menu-item-has-children">
                       <Link activeclass="active" to="home" spy={true} smooth={true} duration={500} >Home</Link>
                       <ul className="sub-menu">
                         <li><NavLink onClick={ClickHandler} href="/home">Home style 1</NavLink></li>
@@ -41,13 +41,14 @@ const Header = (props) => {
                         <li><NavLink onClick={ClickHandler} href="/home3">Home style 3</NavLink></li>
                         <li><NavLink onClick={ClickHandler} href="/home4">Home style 4</NavLink></li>
                       </ul>
-                    </li>
-                    <li><Link activeclass="active" to="couple" spy={true} smooth={true} duration={500} offset={-150} >Couple</Link></li>
-                    <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} offset={-50}>Story</Link></li>
-                    <li><Link activeclass="active" to="gallery" spy={true} smooth={true} duration={500} offset={-50}>Gallery</Link></li>
-                    <li><Link activeclass="active" to="RSVP" spy={true} smooth={true} duration={500} offset={-50}>RSVP</Link></li>
-                    <li><Link activeclass="active" to="event" spy={true} smooth={true} duration={500} offset={-50}>Events</Link></li>
-                    <li className="menu-item-has-children">
+                    </li> */}
+                    <li><Link activeclass="active" to="couple" spy={true} smooth={true} duration={500} offset={-150} >Presentación</Link></li>
+                    <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} offset={-50}>Especial</Link></li>
+                    <li><Link activeclass="active" to="gallery" spy={true} smooth={true} duration={500} offset={-50}>Galería</Link></li>
+                    <li><Link activeclass="active" to="RSVP" spy={true} smooth={true} duration={500} offset={-50}>Asistencia</Link></li>
+                    <li><Link activeclass="active" to="parents" spy={true} smooth={true} duration={500} offset={-50}>Padres y padrinos</Link></li>
+                    <li><Link activeclass="active" to="event" spy={true} smooth={true} duration={500} offset={-50}>Eventos</Link></li>
+                    {/* <li className="menu-item-has-children">
                       <NavLink onClick={ClickHandler} href="/blog">Blog</NavLink>
                       <ul className="sub-menu">
                         <li><NavLink onClick={ClickHandler} href="/blog">Blog right sidebar</NavLink></li>
@@ -65,13 +66,13 @@ const Header = (props) => {
                           </ul>
                         </li>
                       </ul>
-                    </li>
+                    </li>*/}
                   </ul>
 
                 </div>
               </div>
               <div className="col-lg-2 col-md-2 col-2">
-                <div className="header-right">
+                {/* <div className="header-right">
                   <div className="header-search-form-wrapper">
                     <div className="cart-search-contact">
                       <button onClick={() => setMenuState(!menuActive)} className="search-toggle-btn"><i
@@ -91,7 +92,7 @@ const Header = (props) => {
                   <NavLink className="theme-btn" href="/rsvp"><span className="text">Attend Now</span> <span className="mobile">
                     <i className="fi flaticon-user"></i>
                   </span></NavLink>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

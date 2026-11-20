@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>Mawhub - Wedding Invitation Next JS Template</title>
+        <title>Michelle - Mis XV años</title>
       </Head>
       <Component {...pageProps} />
       <ToastContainer />
