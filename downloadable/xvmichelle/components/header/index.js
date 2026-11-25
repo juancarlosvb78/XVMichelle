@@ -43,10 +43,10 @@ const Header = (props) => {
                       </ul>
                     </li> */}
                     <li><Link activeclass="active" to="couple" spy={true} smooth={true} duration={500} offset={-150} >Presentación</Link></li>
-                    <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} offset={-50}>Especial</Link></li>
+                    {/* <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} offset={-50}>Especial</Link></li> */}
                     <li><Link activeclass="active" to="gallery" spy={true} smooth={true} duration={500} offset={-50}>Galería</Link></li>
                     <li><Link activeclass="active" to="RSVP" spy={true} smooth={true} duration={500} offset={-50}>Asistencia</Link></li>
-                    <li><Link activeclass="active" to="parents" spy={true} smooth={true} duration={500} offset={-50}>Padres y padrinos</Link></li>
+                    {/* <li><Link activeclass="active" to="parents" spy={true} smooth={true} duration={500} offset={-50}>Padres y padrinos</Link></li> */}
                     <li><Link activeclass="active" to="event" spy={true} smooth={true} duration={500} offset={-50}>Eventos</Link></li>
                     {/* <li className="menu-item-has-children">
                       <NavLink onClick={ClickHandler} href="/blog">Blog</NavLink>

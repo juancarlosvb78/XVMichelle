@@ -1,5 +1,5 @@
 import React from 'react'
-import hImg1 from '/public/images/slider/XV_Michelle_502x753.png'
+import hImg1 from '/public/images/slider/Michelle.png'
 import shape1 from '/public/images/slider/line-shape1.svg'
 import shape2 from '/public/images/slider/line-shape2.svg'
 import shape3 from '/public/images/slider/shape3.png'

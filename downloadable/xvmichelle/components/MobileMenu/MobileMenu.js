@@ -57,10 +57,10 @@ const MobileMenu = () => {
                         )
                     })}
                     <li><Link activeclass="active" to="couple" spy={true} smooth={true} duration={500} >Presentación</Link></li>
-                    <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} >Especial</Link></li>
+                    {/* <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} >Especial</Link></li> */}
                     <li><Link activeclass="active" to="gallery" spy={true} smooth={true} duration={500} >Galería</Link></li>
                     <li><Link activeclass="active" to="RSVP" spy={true} smooth={true} duration={500} >Asistencia</Link></li>
-                    <li><Link activeclass="active" to="parents" spy={true} smooth={true} duration={500}>Padres y padrinos</Link></li>
+                    {/* <li><Link activeclass="active" to="parents" spy={true} smooth={true} duration={500}>Padres y padrinos</Link></li>                     */}
                     <li><Link activeclass="active" to="event" spy={true} smooth={true} duration={500} >Eventos</Link></li>
                 </ul>
 

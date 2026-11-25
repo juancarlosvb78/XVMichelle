@@ -10,7 +10,7 @@ const CtaSection = (props) => {
     return (
         <div className={`wpo-cta-section ${props.ctClass}`}>
             <div className="conatiner-fluid">
-                <div className="wpo-cta-item">
+                <div className="wpo-cta-item cta-text-top">
                     <h2>«¡Me encantará compartir este día contigo!»</h2>
                     <p>«Será una alegría enorme contar con tu presencia y compartir juntos
                     una noche llena de momentos especiales, emociones y recuerdos inolvidables.
