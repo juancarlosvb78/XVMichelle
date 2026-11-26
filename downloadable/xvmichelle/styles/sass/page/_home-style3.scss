@@ -465,3 +465,121 @@
 		display: none;
 	}
 }
+
+
+.wpo-important-details-section {
+    padding: 80px 0;
+    background: #fbf8f5;
+
+    .important-details-content {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 45px 55px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #D8C4A5;
+
+        // Referencia para las flores decorativas
+        position: relative;
+        isolation: isolate;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        // Esquina superior izquierda
+        &::before {
+            top: -55px;
+            left: -65px;
+            background-image: url('/images/slider/shape4.png');
+            background-position: top left;
+        }
+
+        // Esquina inferior derecha
+        &::after {
+            bottom: -55px;
+            right: -65px;
+            background-image: url('/images/slider/shape3.png');
+            background-position: bottom right;
+        }
+
+        // Mantener el contenido por encima de las decoraciones
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .details-subtitle {
+            display: block;
+            color: #8A2035;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            color: #8A2035;
+            margin-bottom: 15px;
+        }
+
+        .details-divider {
+            width: 65px;
+            height: 2px;
+            background: #D8C4A5;
+            margin: 0 auto 30px;
+        }
+
+        .details-item {
+            margin-bottom: 25px;
+
+            h3 {
+                color: #8A2035;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: #555;
+                line-height: 1.8;
+                margin-bottom: 0;
+            }
+        }
+
+        .details-thanks {
+            color: #8A2035;
+            font-style: italic;
+            margin: 30px 0 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 55px 0;
+
+        .important-details-content {
+            padding: 35px 20px;
+
+            &::before,
+            &::after {
+                width: 100px;
+                height: 100px;
+            }
+
+            &::before {
+                top: -30px;
+                left: -20px;
+            }
+
+            &::after {
+                bottom: -30px;
+                right: -20px;
+            }
+        }
+    }
+}

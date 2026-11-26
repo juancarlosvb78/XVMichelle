@@ -1,72 +1,84 @@
-import React, { Fragment, useState } from 'react';
-import List from "@mui/material/List";
+
+import React, { useState } from 'react';
 import ListItem from "@mui/material/ListItem";
-import Collapse from "@mui/material/Collapse";
-import { Link } from 'react-scroll'
-import NavLink from 'next/link'
+import { Link as ScrollLink } from "react-scroll";
 
 const menus = [
-    // Se eliminaron Home y Blog porque no se ocuparán en la invitación.
+    {
+        id: 1,
+        title: 'Presentación',
+        link: 'couple',
+        offset: -150,
+    },
+    {
+        id: 2,
+        title: 'Galería',
+        link: 'gallery',
+        offset: -50,
+    },
+    {
+        id: 3,
+        title: 'Eventos',
+        link: 'event',
+        offset: -50,
+    },
+    {
+        id: 4,
+        title: 'Detalles importantes',
+        link: 'detalles',
+        offset: -50,
+    },
+    {
+        id: 5,
+        title: 'Asistencia',
+        link: 'RSVP',
+        offset: -50,
+    },
 ];
-
 
 const MobileMenu = () => {
 
-    const [openId, setOpenId] = useState(0);
     const [menuActive, setMenuState] = useState(false);
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    }
+    const CloseMenu = () => {
+        setMenuState(false);
+    };
 
     return (
         <div>
             <div className={`mobileMenu ${menuActive ? "show" : ""}`}>
                 <div className="menu-close">
-                    <div className="clox" onClick={() => setMenuState(!menuActive)}><i className="ti-close"></i></div>
+                    <div
+                        className="clox"
+                        onClick={CloseMenu}
+                    >
+                        <i className="ti-close"></i>
+                    </div>
                 </div>
 
                 <ul className="responsivemenu">
-                    {menus.map((item, mn) => {
-                        return (
-                            <ListItem className={item.id === openId ? 'active' : null}  key={mn}>
-                                {item.submenu ?
-                                    <Fragment>
-                                        <p onClick={() => setOpenId(item.id === openId ? 0 : item.id)}>{item.title}
-                                          <i className={item.id === openId ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
-                                        </p>
-                                        <Collapse in={item.id === openId} timeout="auto" unmountOnExit>
-                                            <List className="subMenu">
-                                                <Fragment>
-                                                    {item.submenu.map((submenu, i) => {
-                                                        return (
-                                                            <ListItem key={i}>
-                                                                <NavLink onClick={ClickHandler} className="active"
-                                                                    href={submenu.link}>{submenu.title}</NavLink>
-                                                            </ListItem>
-                                                        )
-                                                    })}
-                                                </Fragment>
-                                            </List>
-                                        </Collapse>
-                                    </Fragment>
-                                    : <NavLink className='active'
-                                        href={item.link}>{item.title}</NavLink>
-                                }
-                            </ListItem>
-                        )
-                    })}
-                    <li><Link activeclass="active" to="couple" spy={true} smooth={true} duration={500} >Presentación</Link></li>
-                    {/* <li><Link activeclass="active" to="story" spy={true} smooth={true} duration={500} >Especial</Link></li> */}
-                    <li><Link activeclass="active" to="gallery" spy={true} smooth={true} duration={500} >Galería</Link></li>
-                    <li><Link activeclass="active" to="RSVP" spy={true} smooth={true} duration={500} >Asistencia</Link></li>
-                    {/* <li><Link activeclass="active" to="parents" spy={true} smooth={true} duration={500}>Padres y padrinos</Link></li>                     */}
-                    <li><Link activeclass="active" to="event" spy={true} smooth={true} duration={500} >Eventos</Link></li>
+                    {menus.map((item) => (
+                        <ListItem key={item.id}>
+                            <ScrollLink
+                                activeClass="active"
+                                to={item.link}
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                offset={item.offset}
+                                onClick={CloseMenu}
+                            >
+                                {item.title}
+                            </ScrollLink>
+                        </ListItem>
+                    ))}
                 </ul>
-
             </div>
 
-            <div className="showmenu" onClick={() => setMenuState(!menuActive)}>
+            <div
+                className="showmenu"
+                onClick={() => setMenuState(!menuActive)}
+            >
                 <button type="button" className="navbar-toggler open-btn">
                     <span className="icon-bar first-angle"></span>
                     <span className="icon-bar middle-angle"></span>
@@ -74,7 +86,7 @@ const MobileMenu = () => {
                 </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default MobileMenu;
