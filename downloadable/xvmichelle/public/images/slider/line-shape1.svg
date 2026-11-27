@@ -1,3 +1,22 @@
+
 <svg width="926" height="378" viewBox="0 0 926 378" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.705231 370.926L49.079 0.942219L924.417 40.8889L789.439 376.816L0.705231 370.926Z" stroke="#C8A898"/>
+    <style>
+        .frame-line {
+            stroke-dasharray: 3000;
+            stroke-dashoffset: 3000;
+            animation: draw-frame 3s ease-in-out forwards;
+        }
+
+        @keyframes draw-frame {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+
+    <path
+        class="frame-line"
+        d="M0.705231 370.926L49.079 0.942219L924.417 40.8889L789.439 376.816L0.705231 370.926Z"
+        stroke="#C8A898"
+    />
 </svg>

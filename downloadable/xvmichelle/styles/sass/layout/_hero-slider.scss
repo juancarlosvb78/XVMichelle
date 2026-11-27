@@ -662,6 +662,7 @@
 			top: -100px;
 			right: 0px;
 			z-index: -1;
+			animation: hero-flower-float 12s ease-in-out infinite;
 
 			@media (max-width:991px) {
 				display: none;
@@ -673,6 +674,7 @@
 			bottom: -90px;
 			left: 100px;
 			z-index: -1;
+			animation: hero-flower-float 15s ease-in-out infinite reverse;
 
 			@media (max-width:1499px) {
 				bottom: -150px;
@@ -1133,5 +1135,12 @@
 		margin: 0 8px;
 	}
 }
+@keyframes hero-flower-float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
 
-
+    50% {
+        transform: translateY(-18px) rotate(3deg);
+    }
+}

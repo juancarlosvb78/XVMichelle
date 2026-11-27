@@ -1,6 +1,7 @@
 
 import React from 'react'
 import SectionTitle from '../SectionTitle'
+import ScrollReveal from '../ScrollReveal'
 import sImg1 from '/public/images/event/4.jpeg'
 import sImg2 from '/public/images/event/5.jpeg'
 import sImg3 from '/public/images/event/6.jpeg'
@@ -40,16 +41,23 @@ const EventSectionS2 = (props) => {
     return (
         <section className={`wpo-event-section-s2 section-padding ${props.eClass}`} id="event">
             <div className="container">
-                <SectionTitle
-                    subTitle={'Mis XV años'}
-                    MainTitle={'Ceremonia y celebración'}
-                />
+                <ScrollReveal animation="fadeInUp" duration={1200}>
+    <SectionTitle
+        subTitle={'Mis XV años'}
+        MainTitle={'Ceremonia y celebración'}
+    />
+</ScrollReveal>
 
                 <div className="wpo-event-wrap">
                     <div className="row">
                         {Events.map((event, eitem) => (
                             <div className="col col-lg-4 col-md-6 col-12" key={eitem}>
-                                <div className="wpo-event-item">
+    <ScrollReveal
+        animation="fadeInUp"
+        duration={1300}
+        delay={eitem * 250}
+    >
+        <div className="wpo-event-item">
 
                                     <div className="wpo-event-img">
                                         <div className="wpo-event-img-inner">
@@ -80,9 +88,10 @@ const EventSectionS2 = (props) => {
                                         </ul>
                                     </div>
 
-                                </div>
-                            </div>
-                        ))}
+                                              </div>
+            </ScrollReveal>
+        </div>
+    ))}
                     </div>
                 </div>
             </div>

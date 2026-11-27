@@ -6,10 +6,10 @@ import WeddingTime from '../../components/weddingTime/WeddingTime';
 import CoupleSection3 from '../../components/CoupleSection3/CoupleSection3';
 //import StorySection3 from '../../components/StorySection3/StorySection3';
 import PortfolioSection2 from '../../components/PortfolioSection2/PortfolioSection2';
+import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import EventSectionS2 from '../../components/EventSectionS2/EventSectionS2';
 import ImportantDetails from '../../components/ImportantDetails';
 import RSVP3 from '../../components/RSVP3';
-//import BrideGrooms from '../../components/BrideGrooms/BrideGrooms';
 import CtaSection from '../../components/CtaSection/CtaSection';
 //import BlogSection from '../../components/BlogSection/BlogSection';
 import Footer2 from '../../components/footer2/Footer2';
@@ -25,10 +25,10 @@ const HomePage3 = () => {
             <CoupleSection3 />
             {/* <StorySection3 /> */}
             <PortfolioSection2 pClass={'pb-0'}/>
+            <BrideGrooms tClass={'pt-0'} />
             <EventSectionS2 />
             <ImportantDetails />
             <RSVP3/>
-            {/* <BrideGrooms tClass={'pt-0'} /> */}
             <CtaSection ctClass={'wpo-cta-section-s2'} />
             {/* <BlogSection blogClass={'section-bg'}/> */}
             <Footer2 />

@@ -1,12 +1,13 @@
 
-import React from 'react'
-import pImg7 from '/public/images/portfolio/7.jpg'
-import Lightbox from "yet-another-react-lightbox";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/styles.css";
-import Image from 'next/image'
+import React from 'react';
+import pImg7 from '/public/images/portfolio/7.jpg';
+import Lightbox from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
+import 'yet-another-react-lightbox/styles.css';
+import Image from 'next/image';
+import ScrollReveal from '../ScrollReveal';
 
-const images = [pImg7]
+const images = [pImg7];
 
 const PortfolioSection2 = (props) => {
 
@@ -39,15 +40,26 @@ const PortfolioSection2 = (props) => {
             id="gallery"
         >
             <div className="container">
+
                 <div className="text-center mb-5">
-                    <h2>Galería fotográfica</h2>
+                    <ScrollReveal animation="fadeInUp" duration={1300}>
+                        <h2>Galería fotográfica</h2>
+                    </ScrollReveal>
                 </div>
 
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-8 col-lg-6">
                         <div className="portfolio-grids gallery-container clearfix">
+
                             {images.map((item, pitem) => (
-                                <div className="grid" key={pitem}>
+                                <ScrollReveal
+                                    as="div"
+                                    className="grid"
+                                    key={pitem}
+                                    animation="fadeInUp"
+                                    duration={1400}
+                                    delay={250}
+                                >
                                     <div
                                         className="img-holder"
                                         onClick={() => setOpen(true)}
@@ -58,12 +70,14 @@ const PortfolioSection2 = (props) => {
                                             alt="Galería fotográfica de Michelle"
                                             className="img img-responsive"
                                         />
+
                                         <div className="hover-content">
                                             <i className="ti-plus"></i>
                                         </div>
                                     </div>
-                                </div>
+                                </ScrollReveal>
                             ))}
+
                         </div>
                     </div>
                 </div>
@@ -76,7 +90,7 @@ const PortfolioSection2 = (props) => {
                 plugins={[Zoom]}
             />
         </section>
-    )
-}
+    );
+};
 
 export default PortfolioSection2;

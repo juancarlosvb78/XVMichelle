@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import shape1 from '/public/images/contact/4.png';
 import shape2 from '/public/images/contact/3.png';
 import Image from 'next/image';
+import ScrollReveal from '../ScrollReveal';
 
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1cIjNggc-6cZVDEhW0AiNyA8jaAGYObJ5ePbor21Yf3UyW_5pXMkYpht-vlNtO7G3/exec';
 
@@ -129,22 +130,29 @@ const RSVP3 = (props) => {
                             <div className="wpo-contact-section-inner">
                                 <div className="wpo-contact-form-area">
 
-                                    <div className="wpo-section-title">
-                                        <h2>Confirma tu asistencia</h2>
-                                        <p>
-                                            Nos encantará compartir contigo
-                                            este día tan especial.
-                                        </p>
-                                    </div>
+                                   <ScrollReveal animation="fadeInUp" duration={1200}>
+    <div className="wpo-section-title">
+        <h2>Confirma tu asistencia</h2>
+        <p>
+            Nos encantará compartir contigo
+            este día tan especial.
+        </p>
+    </div>
+</ScrollReveal>
 
-                                    <form
-                                        ref={formRef}
-                                        method="POST"
-                                        action={SCRIPT_URL}
-                                        target="rsvp-response-frame"
-                                        onSubmit={submitHandler}
-                                        className="contact-validation-active"
-                                    >
+<ScrollReveal
+    animation="fadeInUp"
+    duration={1300}
+    delay={200}
+>
+    <form
+        ref={formRef}
+        method="POST"
+        action={SCRIPT_URL}
+        target="rsvp-response-frame"
+        onSubmit={submitHandler}
+        className="contact-validation-active"
+    >
                                         <input
                                             ref={payloadRef}
                                             type="hidden"
@@ -316,14 +324,15 @@ const RSVP3 = (props) => {
                                             </p>
                                         )}
 
-                                    </form>
+                                      </form>
+</ScrollReveal>
 
-                                    <iframe
-                                        ref={iframeRef}
-                                        name="rsvp-response-frame"
-                                        title="Respuesta de confirmación"
-                                        style={{ display: 'none' }}
-                                    />
+<iframe
+    ref={iframeRef}
+    name="rsvp-response-frame"
+    title="Respuesta de confirmación"
+    style={{ display: 'none' }}
+/>
 
                                 </div>
                             </div>

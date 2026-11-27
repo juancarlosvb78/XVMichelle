@@ -1,0 +1,66 @@
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="608"
+    height="405"
+    viewBox="0 0 608 405"
+    fill="none"
+>
+    <style>
+        .frame {
+            stroke: #C8A898;
+            stroke-width: 1.4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            animation: draw-frame 3.5s ease-in-out forwards;
+        }
+
+        .inner-frame {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes draw-frame {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+
+    <!-- Marco exterior -->
+    <path
+        class="frame"
+        pathLength="1"
+        d="
+            M 38 12
+            H 570
+            Q 596 12 596 38
+            V 367
+            Q 596 393 570 393
+            H 38
+            Q 12 393 12 367
+            V 38
+            Q 12 12 38 12
+            Z
+        "
+    />
+
+    <!-- Marco interior -->
+    <path
+        class="frame inner-frame"
+        pathLength="1"
+        d="
+            M 42 25
+            H 566
+            Q 583 25 583 42
+            V 363
+            Q 583 380 566 380
+            H 42
+            Q 25 380 25 363
+            V 42
+            Q 25 25 42 25
+            Z
+        "
+    />
+</svg>

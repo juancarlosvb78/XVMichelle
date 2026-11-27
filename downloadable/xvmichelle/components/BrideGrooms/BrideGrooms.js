@@ -6,29 +6,30 @@ import timg2 from '/public/images/team/Gris.jpeg';
 import timg3 from '/public/images/team/Miguel.jpeg';
 import timg4 from '/public/images/team/Teresa.jpeg';
 import Image from "next/image";
+import ScrollReveal from "../ScrollReveal";
 
 const brideGrooms = [
     {
         id: '1',
-        tImg: timg1,
+        // tImg: timg1,
         name: 'Raul Berrios Hernandez',
         title: 'Papá',
     },
     {
         id: '2',
-        tImg: timg2,
+        //tImg: timg2,
         name: 'Gricelda Partida Gonzalez',
         title: 'Mamá',
     },
     {
         id: '3',
-        tImg: timg3,
+       // tImg: timg3,
         name: 'Miguel Angel Cortes Cortes',
         title: 'Padrino',
     },
     {
         id: '4',
-        tImg: timg4,
+       // tImg: timg4,
         name: 'Teresa Partida Gonzalez',
         title: 'Madrina',
     },
@@ -37,16 +38,19 @@ const brideGrooms = [
 const BrideGrooms = (props) => {
 
     return (
-        <section
-            id="parents"
-            className={`wpo-team-section section-padding ${props.tClass || ''}`}
-        >
+       <section
+    id="parents"
+    className={`wpo-team-section section-padding ${props.tClass || ''}`}
+    style={{ marginTop: '50px' }}
+>
             <div className="container">
 
-                <SectionTitle
-                    subTitle={'Con mucho cariño'}
-                    MainTitle={'Padres y padrinos'}
-                />
+               <ScrollReveal animation="fadeInUp" duration={1200}>
+    <SectionTitle
+        subTitle={'Con mucho cariño'}
+        MainTitle={'Padres y padrinos'}
+    />
+</ScrollReveal>
 
                 <div className="wpo-team-wrap">
                     <div className="row">
@@ -57,19 +61,25 @@ const BrideGrooms = (props) => {
                             >
                                 <div className="wpo-team-item">
 
-                                    <div className="wpo-team-img">
+                                    {/* <div className="wpo-team-img">
                                         <div className="wpo-team-img-inner">
                                             <Image
                                                 src={brideGroom.tImg}
                                                 alt={brideGroom.name}
                                             />
                                         </div>
-                                    </div>
+                                    </div> */}
 
-                                    <div className="wpo-team-text">
-                                        <h3>{brideGroom.name}</h3>
-                                        <span>{brideGroom.title}</span>
-                                    </div>
+                                    <ScrollReveal
+    animation="fadeInUp"
+    duration={1200}
+    delay={Number(brideGroom.id) * 200}
+>
+    <div className="wpo-team-text">
+        <h3>{brideGroom.name}</h3>
+        <span>{brideGroom.title}</span>
+    </div>
+</ScrollReveal>
 
                                 </div>
                             </div>
